@@ -2,8 +2,8 @@
 
   <remap from="/camera/odom/sample" to="/odom"/>
  <!-- Run the map server --> 
-   <arg name="map_file" default="$(find navbot_description)/maps/mymap.yaml"/>
-    <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
+    <arg name="map_file" default="$(find navbot_description)/maps/mymap.yaml"/>
+    <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/> 
 
  <!--- Run AMCL --> 
     <include file="$(find navbot_navigation)/launch/amcl.launch" />
